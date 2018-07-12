@@ -1,0 +1,40 @@
+<style>
+   
+</style>
+
+    
+<header style="z-index: 999;"><center>Our ToDo App</center>
+    
+    <ul>
+       
+                <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{{userName}}
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><button data-ng-click="gotoHome()">Home</button></li>
+                          <li><button data-ng-click="gotoDashboard()">Dashboard</button></li>
+                          <li><button data-ng-click="gotoProfile()">Profile</button></li>
+                          <li><button data-ng-click = "logout()">Logout</button></li>
+                        </ul>
+                      </div>
+            <!-- <option value=""><li><button data-ng-click="gotoHome()">{{userName}}</button></li></option>
+            <option value=""> <li><button data-ng-click="gotoHome()">Home</button></li></option>
+            <option value=""><li><button data-ng-click="gotoDashboard()">Dashboard</button></li></option>
+            <option value=""><li><button data-ng-click="gotoProfile()">Profile</button></li></option>
+            <option value=""><li><button data-ng-click = "logout()">Logout</button></li></option> -->
+  
+    </ul>
+
+</header>
+
+<main>
+    <ui-view style="background-color: gainsboro">
+            <center><h1 class="har" >Welcome to our Todo App</h1></center>
+            <img src="app/home-component/corporate-grey-low-poly-geometric-motion-background-video-animation-hd-1920x1080_nypfik1eg__F0008.png";
+            
+    </ui-view>
+    
+    
+    
+</main>
+

@@ -1,0 +1,58 @@
+<style>
+
+    body{
+        background-color: gainsboro;
+    }
+    #v
+    {
+        width: 470px;
+    border: 25px solid grey;
+    padding: 18px;
+    margin-left:10px;
+    }
+</style>
+
+<body>
+<h1 style="margin-left: 47px">
+    <strong>Welcome to Dashboard</h1></strong>
+<div class="row todoForm" id="v"  > 
+    <form>
+        <h4>ToDo-Name:</h4>
+        <div>
+            <input type="text" id="todoName" data-ng-model="todo.name" style="width:370px">
+            
+            <div>
+                <h5>
+                   <h4> Description:</h4>
+                    
+                    <textarea rows="4" cols="50" data-ng-model="todo.desc"></textarea>
+                </h5>
+            </div>
+            <div ng-if="todo.name!=undefined && todo.name!=null && todo.name!='' ">
+                <button ng-click="addData()">Add</button>
+            </div>
+        </div>
+</div>
+</form>
+</div>
+<div class="row">
+    <div class="col-md-6 todoListArea">
+
+
+        <h3><strong>Todo List</strong></h3>
+        <ul>
+            <li style="list-style: none" ng-repeat="x in todoList" ng-click="showDesc(x.desc)" ng-mouseover="open=true" ng-mouseleave="open=false">
+                <input type="checkbox" ng-model="x.checked" style="width:15px">
+                <label ng-class="{'strikeoff':x.checked}" style="position:relative; bottom:12px;" >
+                    {{x.name}}</label>&nbsp;&nbsp;&nbsp;
+                <button ng-show="open" ng-click="delete($index)" style="position:relative; bottom:12px;">Delete</button>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6 todoDescriptionArea">
+        <h3><strong>Description</strong></h3>
+        <p id="para">{{todoDesc}}</p>
+    </div>
+
+</div>
+</body>
